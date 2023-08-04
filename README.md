@@ -1,1 +1,1 @@
-# Camp-Advisor
+# CampAdvisor

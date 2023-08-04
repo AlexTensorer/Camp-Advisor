@@ -1,0 +1,80 @@
+<%layout('layouts/boilerplate')%>
+
+<h1>Modifier camping</h1>
+
+<div class="columns" style="margin-top: 5px;">
+
+    <div class="column is-4">
+        <img class="is-centered camp-img" src="<%=campground.image%>" alt="">
+    </div>
+
+    <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+
+        <div class="column field">
+            <label class="label" for="title">Title</label>
+            <div class="control">
+                <input class="input" type="text" name="campground[title]" value="<%=campground.title %>">
+            </div>
+        </div>
+
+        <div class="column field">
+            <label class="label">Lieu</label>
+            <div class="control has-icons-right">
+                <input class="input" type="text" name="campground[location]" value="<%= campground.location%>">
+            </div>
+        </div>
+
+        <div class="column field is-grouped">
+            <div class="control">
+                <button class="add-camp-btn button is-link">Modifier camping</button>
+            </div>
+        </div>
+
+        <div class="column field">
+            <label class="label">Image URL</label>
+            <div class="control">
+                <input class="input" type="text" name="campground[image]" placeholder="Image URL">
+            </div>
+        </div>
+
+        <div class="column field">
+            <label class="label">Prix moyen par nuit</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="0.00">
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-euro-sign"></i>
+                </span>
+            </div>
+        </div>
+    </form>
+
+
+
+    <!-- <section class="add-camp columns">
+
+    <div class="add-camp-form column is-6">
+
+        <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+            <div class="field">
+                <label class="label" for="title">Title</label>
+                <div class="control">
+                    <input class="input" type="text" name="campground[title]" value="<%=campground.title %>">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Lieu</label>
+                <div class="control has-icons-right">
+                    <input class="input" type="text" name="campground[location]" value="<%= campground.location%>">
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="add-camp-btn button is-link">Modifier camping</button>
+                        </div>
+                    </div>
+        </form>
+
+        <div class="column is-6">HELLLO</div>
+    </div> -->
+
+    </section>

@@ -1,0 +1,48 @@
+<%layout('layouts/boilerplate')%>
+
+<section class="add-camp columns">
+
+    <div class="add-camp-form column">
+
+        <form class="form-validate" action="/campgrounds" method="POST">
+            <div class="field">
+                <label class="label" for="title">Title</label>
+                <div class="control">
+                    <input class="input" type="text" name="campground[title]" placeholder="Nom du camping" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Lieu</label>
+                <div class="control">
+                    <input class="input" type="text" name="campground[location]" placeholder="Ville, Région" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Image URL</label>
+                <div class="control">
+                    <input class="input" type="text" name="campground[image]" placeholder="Image URL" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Prix moyen par nuit</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="0.00" required>
+                    <span class="icon is-small is-left">
+                        <i class="fa-solid fa-euro-sign"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="add-camp-btn button is-link">Ajouter camping</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</section>
