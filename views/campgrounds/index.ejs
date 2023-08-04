@@ -32,7 +32,7 @@
 const map = new mapboxgl.Map({
 container: 'map',
 // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-style: 'mapbox://styles/mapbox/dark-v11',
+style: 'mapbox://styles/mapbox/light-v11',
 center: [1.2276, 46.2137],
 zoom: 4
 });
@@ -65,11 +65,11 @@ paint: {
 'circle-color': [
 'step',
 ['get', 'point_count'],
-'#51bbd6',
+'#DABA79',
 100,
-'#f1f075',
+'#DABA79',
 750,
-'#f28cb1'
+'#DABA79'
 ],
 'circle-radius': [
 'step',
